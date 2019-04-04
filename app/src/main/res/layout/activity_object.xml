@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ObjectActivity">
+
+    <ImageView
+        android:id="@+id/bed"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/droid_thumb" />
+
+    <ImageView
+        android:id="@+id/computer"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/cabin_thumb" />
+
+    <ImageView
+        android:id="@+id/couch"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/house_thumb" />
+
+    <ImageView
+        android:id="@+id/rchair"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/igloo_thumb" />
+
+
+
+
+
+
+</LinearLayout>
