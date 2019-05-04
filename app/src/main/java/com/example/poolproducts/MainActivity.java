@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
 import com.google.ar.core.Frame;
@@ -20,6 +22,7 @@ import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.ux.ArFragment;
+import com.google.ar.sceneform.ux.BaseArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.util.List;
@@ -153,13 +156,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (object.equals("bed")) {
-            ImageView bed = new ImageView(this);
-            bed.setImageResource(R.drawable.droid_thumb);
-            bed.setContentDescription("Bed_01");
-            bed.setOnClickListener(view -> {
-                addObject(Uri.parse("Bed_01.sfb"));
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Bed_01.sfb"));
+                }
             });
-            gallery.addView(bed);
+
         }
 
         if (object.equals("computer")) {
@@ -167,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
             computer.setImageResource(R.drawable.cabin_thumb);
             computer.setContentDescription("Computer");
             computer.setOnClickListener(view -> {
+                Toast.makeText(this,"Check",Toast.LENGTH_SHORT).show();
                 addObject(Uri.parse("Computer.sfb"));
             });
             gallery.addView(computer);
