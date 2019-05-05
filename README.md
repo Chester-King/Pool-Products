@@ -20,6 +20,7 @@ Assuming you have an Image in any activity. So the process of Clicking that imag
 
 * **Step1**
 
+This is the image view on clicking which you will be sent to mainActivity
 ```java
 ImageView bed=(ImageView) findViewById(R.id.bed);
         bed.setOnClickListener(new View.OnClickListener() {
@@ -33,17 +34,17 @@ ImageView bed=(ImageView) findViewById(R.id.bed);
             }
         });
 ```
-This is the image view on clicking which you will be sent to mainActivity
+In this case The imageview id is Bed. We set a Listener on it. The moment it is clicked we define the variable intent. But there is an extra also put in this intent.
+While going to the MainActivity you see the line 
 ```java
 Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
                 
 ```
-In this case The imageview id is Bed. We set a Listener on it. The moment it is clicked we define the variable intent. But there is an extra also put in this intent.
-While going to the MainActivity you see the line 
+This line will tell the MainActivity that the **Object** to be deployed is a __Bed__
 ```java 
 intent.putExtra("object","bed");
 ```
-This line will tell the MainActivity that the **Object** to be deployed is a __Bed__
+
 
 then we start the intent
 ```java
@@ -55,14 +56,15 @@ startActivity(intent);
 
 How to receive the Object at the MainActivity
 
+These three lines will give the variable **object** the value of the _item to be deployed_
+In this particular case the variable **object** has the value _"bed"_
 ```java
 Intent i = getIntent();
 Bundle b = i.getExtras();
 String object = (String) b.get("object");
 ```
 
-These three lines will give the variable **object** the value of the _item to be deployed_
-In this particular case the variable **object** has the value _"bed"_
+
 
 After this using the value of the **object** value we decide the name of the model to be launched
 The following code goes in MainActivity
@@ -78,8 +80,8 @@ if (object.equals("bed")) {
         }
 ```
 
-the line
+this line
+Fires up a series of functions which uses the model **"Bed_01.sfb"** to deploy it on the screen
 ```java
 addObject(Uri.parse("Bed_01.sfb"));
 ```
-Fires up a series of functions which uses the model **"Bed_01.sfb"** to deploy it on the screen
