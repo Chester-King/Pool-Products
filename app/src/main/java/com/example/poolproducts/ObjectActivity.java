@@ -61,5 +61,49 @@ public class ObjectActivity extends AppCompatActivity {
             }
         });
 
+        ImageView laptop=(ImageView) findViewById(R.id.laptop);
+        laptop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"laptop Clicked",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                intent.putExtra("object","laptop");
+                startActivity(intent);
+            }
+        });
+
+        ImageView lamp=(ImageView) findViewById(R.id.lamp);
+        lamp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Lamp Clicked",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                intent.putExtra("object","lamp");
+                startActivity(intent);
+            }
+        });
+
+        ImageView tablelamp=(ImageView) findViewById(R.id.tablelamp);
+        tablelamp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"tablelamp Clicked",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                intent.putExtra("object","tablelamp");
+                startActivity(intent);
+            }
+        });
+
+        ImageView wmachine=(ImageView) findViewById(R.id.wmachine);
+        wmachine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Watching Machine Clicked",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                intent.putExtra("object","wmachine");
+                startActivity(intent);
+            }
+        });
+
     }
 }

@@ -1,24 +1,24 @@
 {
   materials: [
     {
-      name: 'initialShadingGroup',
+      name: '_crayfishdiffuse',
       parameters: [
         {
           baseColor: null,
         },
         {
           baseColorTint: [
-            0.5,
-            0.5,
-            0.5,
+            0.019599999999999999,
+            0.019599999999999999,
+            0.019599999999999999,
             1,
           ],
         },
         {
-          metallic: 0,
+          metallic: 1,
         },
         {
-          roughness: 1,
+          roughness: 0.25,
         },
         {
           opacity: null,
@@ -27,24 +27,24 @@
       source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
     },
     {
-      name: 'lambert3SG',
+      name: '02___Default',
       parameters: [
         {
-          baseColor: 'Computer Texture',
+          baseColor: null,
         },
         {
           baseColorTint: [
-            1,
-            1,
+            0,
+            0.75290000000000001,
             1,
             1,
           ],
         },
         {
-          metallic: 0,
+          metallic: 1,
         },
         {
-          roughness: 1,
+          roughness: 0.408248,
         },
         {
           opacity: null,
@@ -60,17 +60,10 @@
       'Orientation',
     ],
     collision: {},
-    file: 'sampledata/models/Computer.obj',
-    name: 'Computer',
+    file: 'sampledata/models/Desk lamp.obj',
+    name: 'Desk lamp',
     recenter: 'root',
-    scale: 0.0008260000000000001,
+    scale: 1.0000000000000001e-05,
   },
-  samplers: [
-    {
-      file: 'sampledata/models\\Computer Texture.png',
-      name: 'Computer Texture',
-      pipeline_name: 'Computer Texture.png',
-    },
-  ],
   version: '0.54:2',
 }

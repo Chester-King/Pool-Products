@@ -71,3 +71,24 @@ sceneform.asset('sampledata/models/Laptop.obj',
         'default',
         'sampledata/models/Laptop.sfa',
         'src/main/assets/Laptop')
+
+
+sceneform.asset('sampledata/models/Cabin.obj',
+        'default',
+        'sampledata/models/Cabin.sfa',
+        'src/main/assets/Cabin')
+
+sceneform.asset('sampledata/models/Standing_lamp_01.obj',
+        'default',
+        'sampledata/models/Standing_lamp_01.sfa',
+        'src/main/assets/Standing_lamp_01')
+
+sceneform.asset('sampledata/models/Desk lamp.obj',
+        'default',
+        'sampledata/models/Desk lamp.sfa',
+        'src/main/assets/Desk lamp')
+
+sceneform.asset('sampledata/models/Clothes dryer.obj',
+        'default',
+        'sampledata/models/Clothes dryer.sfa',
+        'src/main/assets/Clothes dryer')

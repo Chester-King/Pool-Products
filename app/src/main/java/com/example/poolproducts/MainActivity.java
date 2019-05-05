@@ -148,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeGallery() {
-        LinearLayout gallery = findViewById(R.id.gallery_layout);
 
         Intent i = getIntent();
         Bundle b = i.getExtras();
@@ -166,39 +165,86 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (object.equals("computer")) {
-            ImageView computer = new ImageView(this);
-            computer.setImageResource(R.drawable.cabin_thumb);
-            computer.setContentDescription("Computer");
-            computer.setOnClickListener(view -> {
-                Toast.makeText(this,"Check",Toast.LENGTH_SHORT).show();
-                addObject(Uri.parse("Computer.sfb"));
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Computer.sfb"));
+                }
             });
-            gallery.addView(computer);
 
 
         }
 
         if (object.equals("couch")) {
-            ImageView couch = new ImageView(this);
-            couch.setImageResource(R.drawable.house_thumb);
-            couch.setContentDescription("Couch");
-            couch.setOnClickListener(view -> {
-                addObject(Uri.parse("Couch.sfb"));
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Couch.sfb"));
+                }
             });
-            gallery.addView(couch);
+
+
         }
 
         if (object.equals("rchair")) {
-            ImageView rchair = new ImageView(this);
-            rchair.setImageResource(R.drawable.igloo_thumb);
-            rchair.setContentDescription("model");
-            rchair.setOnClickListener(view -> {
-                addObject(Uri.parse("model.sfb"));
-            });
-            gallery.addView(rchair);
 
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("model.sfb"));
+                }
+            });
 
         }
+
+        if (object.equals("laptop")) {
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Laptop.sfb"));
+                }
+            });
+
+        }
+
+
+        if (object.equals("lamp")) {
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Standing_lamp_01.sfb"));
+                }
+            });
+
+        }
+        if (object.equals("tablelamp")) {
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Desk Lamp.sfb"));
+                }
+            });
+
+        }
+
+        if (object.equals("wmachine")) {
+
+            fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
+                @Override
+                public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
+                    addObject(Uri.parse("Clothes dryer.sfb"));
+                }
+            });
+
+        }
+
+
+
 
     }
 
