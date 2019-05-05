@@ -20,7 +20,7 @@ Assuming you have an Image in any activity. So the process of Clicking that imag
 
 * **Step1**
 
-This is the image view on clicking which you will be sent to mainActivity
+This is the image view in the ObjectActivity on clicking which you will be sent to MainActivity
 ```java
 ImageView bed=(ImageView) findViewById(R.id.bed);
         bed.setOnClickListener(new View.OnClickListener() {
