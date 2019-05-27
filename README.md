@@ -18,7 +18,26 @@ The main camera activity in which the object will be deployed in real world afte
 
 Assuming you have an Image in any activity. So the process of Clicking that image and deploying that object on your screen happens in this way
 
-* **Step1**
+### Installing Sceneform
+
+* **Step1** 
+
+First you need to install Sceneform plugin.
+Go to android Studio: 
+go to File -> Settings ->  Plugins -> Search for sceneform -> Install it
+
+* **Step2**
+
+Copy the sampledata  directory in the app folder and place it in your project
+Go in the models folder and delete all the sfa files
+
+* **Step3**
+
+Right click on the .obj files 
+click on Import Sceneform assest
+And then click Ok in the dialog box to import it
+
+* **Step4**
 
 This is the image view in the ObjectActivity on clicking which you will be sent to MainActivity
 ```java
@@ -52,7 +71,7 @@ startActivity(intent);
 ```
 
 
-* **Step2**
+* **Step5**
 
 How to receive the Object at the MainActivity
 
