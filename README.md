@@ -38,14 +38,14 @@ meta-data tag will go inside application tag
 
 * **Step5**
 
-This is the image view in the ObjectActivity on clicking which you will be sent to MainActivity
+This is the image view in the ObjectActivity on clicking which you will be sent to ARActivity
 ```java
 ImageView bed=(ImageView) findViewById(R.id.bed);
         bed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"bed Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","bed");
                 startActivity(intent);
 
@@ -53,12 +53,12 @@ ImageView bed=(ImageView) findViewById(R.id.bed);
         });
 ```
 In this case The imageview id is Bed. We set a Listener on it. The moment it is clicked we define the variable intent. But there is an extra also put in this intent.
-While going to the MainActivity you see the line 
+While going to the ARActivity you see the line 
 ```java
-Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 
 ```
-This line will tell the MainActivity that the **Object** to be deployed is a __Bed__
+This line will tell the ARActivity that the **Object** to be deployed is a __Bed__
 ```java 
 intent.putExtra("object","bed");
 ```
@@ -72,7 +72,7 @@ startActivity(intent);
 
 * **Step6**
 
-How to receive the Object at the MainActivity
+How to receive the Object at the ARActivity
 
 These three lines will give the variable **object** the value of the _item to be deployed_
 In this particular case the variable **object** has the value _"bed"_
@@ -85,7 +85,7 @@ String object = (String) b.get("object");
 
 
 After this using the value of the **object** value we decide the name of the model to be launched
-The following code goes in MainActivity
+The following code goes in ARActivity
 ```java
 if (object.equals("bed")) {
             fragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
