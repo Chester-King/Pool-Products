@@ -1,22 +1,5 @@
 # Pool Products
 
-### Objective
-
-Pool Product is a app which deploys 3D objects in real World depending on the Object Image You clicked.
-
-### Activities
-
-Poop product consist of two activities
-
-* ObjectActivity _(Temporary activity)_
-The activity in which images are displayed. These images when clicked sends you to the MainActivity
-
-* MainActivity
-The main camera activity in which the object will be deployed in real world after tapping the screen
-
-### How to integrate 
-
-Assuming you have an Image in any activity. So the process of Clicking that image and deploying that object on your screen happens in this way
 
 ### Installing Sceneform
 

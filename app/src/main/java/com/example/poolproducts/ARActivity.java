@@ -8,9 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
 import com.google.ar.core.Frame;
@@ -28,7 +25,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class MainActivity extends AppCompatActivity {
+public class ARActivity extends AppCompatActivity {
 
     private ArFragment fragment;
     private PointerDrawable pointer = new PointerDrawable();
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_ar);
         fragment = (ArFragment)getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
 
         fragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {

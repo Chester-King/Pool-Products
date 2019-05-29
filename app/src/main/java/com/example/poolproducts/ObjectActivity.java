@@ -20,7 +20,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"bed Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","bed");
                 startActivity(intent);
 
@@ -32,7 +32,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"couch Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","couch");
                 startActivity(intent);
 
@@ -44,7 +44,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"computer Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","computer");
                 startActivity(intent);
             }
@@ -55,7 +55,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"rchair Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","rchair");
                 startActivity(intent);
             }
@@ -66,7 +66,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"laptop Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","laptop");
                 startActivity(intent);
             }
@@ -77,7 +77,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"Lamp Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","lamp");
                 startActivity(intent);
             }
@@ -88,7 +88,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"tablelamp Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","tablelamp");
                 startActivity(intent);
             }
@@ -99,7 +99,7 @@ public class ObjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"Watching Machine Clicked",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(ObjectActivity.this, MainActivity.class);
+                Intent intent=new Intent(ObjectActivity.this, ARActivity.class);
                 intent.putExtra("object","wmachine");
                 startActivity(intent);
             }
