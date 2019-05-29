@@ -22,6 +22,22 @@ And then click Ok in the dialog box to import it
 
 * **Step4**
 
+Add these lines in manifest.xml file
+meta-data tag will go inside application tag
+
+```xml
+
+<uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+<meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+```
+
+* **Step5**
+
 This is the image view in the ObjectActivity on clicking which you will be sent to MainActivity
 ```java
 ImageView bed=(ImageView) findViewById(R.id.bed);
@@ -54,7 +70,7 @@ startActivity(intent);
 ```
 
 
-* **Step5**
+* **Step6**
 
 How to receive the Object at the MainActivity
 
