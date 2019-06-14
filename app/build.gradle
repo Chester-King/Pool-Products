@@ -92,3 +92,13 @@ sceneform.asset('sampledata/models/Clothes dryer.obj',
         'default',
         'sampledata/models/Clothes dryer.sfa',
         'src/main/assets/Clothes dryer')
+
+sceneform.asset('sampledata/models/Refrigerator_01.obj',
+        'default',
+        'sampledata/models/Refrigerator_01.sfa',
+        'src/main/assets/Refrigerator_01')
+
+sceneform.asset('sampledata/models/CHAHIN_WOODEN_CHAIR.obj',
+        'default',
+        'sampledata/models/CHAHIN_WOODEN_CHAIR.sfa',
+        'src/main/assets/CHAHIN_WOODEN_CHAIR')
